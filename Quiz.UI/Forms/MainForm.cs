@@ -16,5 +16,7 @@ namespace Quiz.UI.Forms
         {
             InitializeComponent();
         }
+
+        
     }
 }

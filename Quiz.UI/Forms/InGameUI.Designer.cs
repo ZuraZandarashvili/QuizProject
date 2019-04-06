@@ -112,7 +112,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.choiceCLabel.AutoSize = true;
             this.choiceCLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceCLabel.Location = new System.Drawing.Point(550, 250);
+            this.choiceCLabel.Location = new System.Drawing.Point(564, 250);
             this.choiceCLabel.Name = "choiceCLabel";
             this.choiceCLabel.Size = new System.Drawing.Size(21, 20);
             this.choiceCLabel.TabIndex = 3;

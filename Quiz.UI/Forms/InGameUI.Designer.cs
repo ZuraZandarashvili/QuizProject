@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InGameUI));
             this.questionLabel = new System.Windows.Forms.Label();
-            this.questionCountLabel = new System.Windows.Forms.Label();
+            this.questionNumberLabel = new System.Windows.Forms.Label();
             this.questionTextBox = new System.Windows.Forms.TextBox();
             this.choiceALabel = new System.Windows.Forms.Label();
             this.choiceBLabel = new System.Windows.Forms.Label();
@@ -62,16 +62,16 @@
             this.questionLabel.TabIndex = 0;
             this.questionLabel.Text = "Question: ";
             // 
-            // questionCountLabel
+            // questionNumberLabel
             // 
-            this.questionCountLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.questionCountLabel.AutoSize = true;
-            this.questionCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionCountLabel.Location = new System.Drawing.Point(493, 50);
-            this.questionCountLabel.Name = "questionCountLabel";
-            this.questionCountLabel.Size = new System.Drawing.Size(19, 20);
-            this.questionCountLabel.TabIndex = 0;
-            this.questionCountLabel.Text = "1";
+            this.questionNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.questionNumberLabel.AutoSize = true;
+            this.questionNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionNumberLabel.Location = new System.Drawing.Point(493, 50);
+            this.questionNumberLabel.Name = "questionNumberLabel";
+            this.questionNumberLabel.Size = new System.Drawing.Size(19, 20);
+            this.questionNumberLabel.TabIndex = 0;
+            this.questionNumberLabel.Text = "1";
             // 
             // questionTextBox
             // 
@@ -82,6 +82,7 @@
             this.questionTextBox.ShortcutsEnabled = false;
             this.questionTextBox.Size = new System.Drawing.Size(577, 109);
             this.questionTextBox.TabIndex = 0;
+            this.questionTextBox.TabStop = false;
             this.questionTextBox.Text = "Questions display here...";
             // 
             // choiceALabel
@@ -89,7 +90,7 @@
             this.choiceALabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceALabel.AutoSize = true;
             this.choiceALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceALabel.Location = new System.Drawing.Point(200, 250);
+            this.choiceALabel.Location = new System.Drawing.Point(200, 251);
             this.choiceALabel.Name = "choiceALabel";
             this.choiceALabel.Size = new System.Drawing.Size(21, 20);
             this.choiceALabel.TabIndex = 0;
@@ -100,7 +101,7 @@
             this.choiceBLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceBLabel.AutoSize = true;
             this.choiceBLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceBLabel.Location = new System.Drawing.Point(560, 250);
+            this.choiceBLabel.Location = new System.Drawing.Point(560, 251);
             this.choiceBLabel.Name = "choiceBLabel";
             this.choiceBLabel.Size = new System.Drawing.Size(21, 20);
             this.choiceBLabel.TabIndex = 0;
@@ -111,7 +112,7 @@
             this.choiceCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceCLabel.AutoSize = true;
             this.choiceCLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceCLabel.Location = new System.Drawing.Point(200, 300);
+            this.choiceCLabel.Location = new System.Drawing.Point(200, 301);
             this.choiceCLabel.Name = "choiceCLabel";
             this.choiceCLabel.Size = new System.Drawing.Size(21, 20);
             this.choiceCLabel.TabIndex = 0;
@@ -122,7 +123,7 @@
             this.choiceDLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceDLabel.AutoSize = true;
             this.choiceDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceDLabel.Location = new System.Drawing.Point(560, 300);
+            this.choiceDLabel.Location = new System.Drawing.Point(560, 301);
             this.choiceDLabel.Name = "choiceDLabel";
             this.choiceDLabel.Size = new System.Drawing.Size(22, 20);
             this.choiceDLabel.TabIndex = 0;
@@ -245,8 +246,8 @@
             // 
             this.ratePercentLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ratePercentLabel.Name = "ratePercentLabel";
-            this.ratePercentLabel.Size = new System.Drawing.Size(35, 17);
-            this.ratePercentLabel.Text = "100%";
+            this.ratePercentLabel.Size = new System.Drawing.Size(13, 17);
+            this.ratePercentLabel.Text = "0";
             // 
             // InGameUI
             // 
@@ -265,7 +266,7 @@
             this.Controls.Add(this.choiceBLabel);
             this.Controls.Add(this.choiceALabel);
             this.Controls.Add(this.questionTextBox);
-            this.Controls.Add(this.questionCountLabel);
+            this.Controls.Add(this.questionNumberLabel);
             this.Controls.Add(this.questionLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -282,7 +283,7 @@
         #endregion
 
         private System.Windows.Forms.Label questionLabel;
-        private System.Windows.Forms.Label questionCountLabel;
+        private System.Windows.Forms.Label questionNumberLabel;
         private System.Windows.Forms.TextBox questionTextBox;
         private System.Windows.Forms.Label choiceALabel;
         private System.Windows.Forms.Label choiceBLabel;

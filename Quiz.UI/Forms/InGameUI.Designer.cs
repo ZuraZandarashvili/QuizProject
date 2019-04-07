@@ -70,7 +70,7 @@
             this.questionCountLabel.Location = new System.Drawing.Point(493, 50);
             this.questionCountLabel.Name = "questionCountLabel";
             this.questionCountLabel.Size = new System.Drawing.Size(19, 20);
-            this.questionCountLabel.TabIndex = 1;
+            this.questionCountLabel.TabIndex = 0;
             this.questionCountLabel.Text = "1";
             // 
             // questionTextBox
@@ -79,103 +79,96 @@
             this.questionTextBox.Location = new System.Drawing.Point(191, 96);
             this.questionTextBox.Multiline = true;
             this.questionTextBox.Name = "questionTextBox";
+            this.questionTextBox.ShortcutsEnabled = false;
             this.questionTextBox.Size = new System.Drawing.Size(577, 109);
-            this.questionTextBox.TabIndex = 2;
+            this.questionTextBox.TabIndex = 0;
             this.questionTextBox.Text = "Questions display here...";
             // 
             // choiceALabel
             // 
-            this.choiceALabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.choiceALabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceALabel.AutoSize = true;
             this.choiceALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.choiceALabel.Location = new System.Drawing.Point(200, 250);
             this.choiceALabel.Name = "choiceALabel";
             this.choiceALabel.Size = new System.Drawing.Size(21, 20);
-            this.choiceALabel.TabIndex = 3;
+            this.choiceALabel.TabIndex = 0;
             this.choiceALabel.Text = "A";
             // 
             // choiceBLabel
             // 
-            this.choiceBLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.choiceBLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceBLabel.AutoSize = true;
             this.choiceBLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceBLabel.Location = new System.Drawing.Point(200, 300);
+            this.choiceBLabel.Location = new System.Drawing.Point(560, 250);
             this.choiceBLabel.Name = "choiceBLabel";
             this.choiceBLabel.Size = new System.Drawing.Size(21, 20);
-            this.choiceBLabel.TabIndex = 3;
+            this.choiceBLabel.TabIndex = 0;
             this.choiceBLabel.Text = "B";
             // 
             // choiceCLabel
             // 
-            this.choiceCLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.choiceCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceCLabel.AutoSize = true;
             this.choiceCLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceCLabel.Location = new System.Drawing.Point(560, 250);
+            this.choiceCLabel.Location = new System.Drawing.Point(200, 300);
             this.choiceCLabel.Name = "choiceCLabel";
             this.choiceCLabel.Size = new System.Drawing.Size(21, 20);
-            this.choiceCLabel.TabIndex = 3;
+            this.choiceCLabel.TabIndex = 0;
             this.choiceCLabel.Text = "C";
             // 
             // choiceDLabel
             // 
-            this.choiceDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.choiceDLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceDLabel.AutoSize = true;
             this.choiceDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.choiceDLabel.Location = new System.Drawing.Point(560, 300);
             this.choiceDLabel.Name = "choiceDLabel";
             this.choiceDLabel.Size = new System.Drawing.Size(22, 20);
-            this.choiceDLabel.TabIndex = 3;
+            this.choiceDLabel.TabIndex = 0;
             this.choiceDLabel.Text = "D";
             // 
             // radioButtonA
             // 
-            this.radioButtonA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButtonA.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButtonA.AutoSize = true;
             this.radioButtonA.Location = new System.Drawing.Point(240, 250);
             this.radioButtonA.Name = "radioButtonA";
             this.radioButtonA.Size = new System.Drawing.Size(153, 24);
-            this.radioButtonA.TabIndex = 4;
+            this.radioButtonA.TabIndex = 1;
             this.radioButtonA.TabStop = true;
             this.radioButtonA.Text = "Possible answer...";
             this.radioButtonA.UseVisualStyleBackColor = true;
             // 
             // radioButtonB
             // 
-            this.radioButtonB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButtonB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButtonB.AutoSize = true;
-            this.radioButtonB.Location = new System.Drawing.Point(240, 300);
+            this.radioButtonB.Location = new System.Drawing.Point(600, 250);
             this.radioButtonB.Name = "radioButtonB";
             this.radioButtonB.Size = new System.Drawing.Size(153, 24);
-            this.radioButtonB.TabIndex = 4;
+            this.radioButtonB.TabIndex = 2;
             this.radioButtonB.TabStop = true;
             this.radioButtonB.Text = "Possible answer...";
             this.radioButtonB.UseVisualStyleBackColor = true;
             // 
             // radioButtonC
             // 
-            this.radioButtonC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButtonC.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButtonC.AutoSize = true;
-            this.radioButtonC.Location = new System.Drawing.Point(610, 250);
+            this.radioButtonC.Location = new System.Drawing.Point(240, 300);
             this.radioButtonC.Name = "radioButtonC";
             this.radioButtonC.Size = new System.Drawing.Size(153, 24);
-            this.radioButtonC.TabIndex = 4;
+            this.radioButtonC.TabIndex = 3;
             this.radioButtonC.TabStop = true;
             this.radioButtonC.Text = "Possible answer...";
             this.radioButtonC.UseVisualStyleBackColor = true;
             // 
             // radioButtonD
             // 
-            this.radioButtonD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButtonD.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButtonD.AutoSize = true;
-            this.radioButtonD.Location = new System.Drawing.Point(610, 300);
+            this.radioButtonD.Location = new System.Drawing.Point(600, 300);
             this.radioButtonD.Name = "radioButtonD";
             this.radioButtonD.Size = new System.Drawing.Size(153, 24);
             this.radioButtonD.TabIndex = 4;
@@ -210,7 +203,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 485);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(958, 22);
-            this.statusStrip1.TabIndex = 6;
+            this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // correctLabel

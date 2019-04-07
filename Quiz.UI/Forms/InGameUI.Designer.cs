@@ -53,7 +53,7 @@
             // 
             // questionLabel
             // 
-            this.questionLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.questionLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.questionLabel.AutoSize = true;
             this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.Location = new System.Drawing.Point(406, 50);
@@ -64,6 +64,7 @@
             // 
             // questionCountLabel
             // 
+            this.questionCountLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.questionCountLabel.AutoSize = true;
             this.questionCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionCountLabel.Location = new System.Drawing.Point(493, 50);
@@ -74,7 +75,7 @@
             // 
             // questionTextBox
             // 
-            this.questionTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.questionTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.questionTextBox.Location = new System.Drawing.Point(191, 96);
             this.questionTextBox.Multiline = true;
             this.questionTextBox.Name = "questionTextBox";
@@ -112,7 +113,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.choiceCLabel.AutoSize = true;
             this.choiceCLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceCLabel.Location = new System.Drawing.Point(564, 250);
+            this.choiceCLabel.Location = new System.Drawing.Point(560, 250);
             this.choiceCLabel.Name = "choiceCLabel";
             this.choiceCLabel.Size = new System.Drawing.Size(21, 20);
             this.choiceCLabel.TabIndex = 3;
@@ -124,7 +125,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.choiceDLabel.AutoSize = true;
             this.choiceDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceDLabel.Location = new System.Drawing.Point(563, 300);
+            this.choiceDLabel.Location = new System.Drawing.Point(560, 300);
             this.choiceDLabel.Name = "choiceDLabel";
             this.choiceDLabel.Size = new System.Drawing.Size(22, 20);
             this.choiceDLabel.TabIndex = 3;
@@ -161,7 +162,7 @@
             this.radioButtonC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButtonC.AutoSize = true;
-            this.radioButtonC.Location = new System.Drawing.Point(609, 250);
+            this.radioButtonC.Location = new System.Drawing.Point(610, 250);
             this.radioButtonC.Name = "radioButtonC";
             this.radioButtonC.Size = new System.Drawing.Size(153, 24);
             this.radioButtonC.TabIndex = 4;
@@ -174,7 +175,7 @@
             this.radioButtonD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButtonD.AutoSize = true;
-            this.radioButtonD.Location = new System.Drawing.Point(609, 298);
+            this.radioButtonD.Location = new System.Drawing.Point(610, 300);
             this.radioButtonD.Name = "radioButtonD";
             this.radioButtonD.Size = new System.Drawing.Size(153, 24);
             this.radioButtonD.TabIndex = 4;
@@ -184,10 +185,11 @@
             // 
             // submitButton
             // 
-            this.submitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.submitButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.submitButton.BackColor = System.Drawing.Color.SpringGreen;
             this.submitButton.FlatAppearance.BorderSize = 0;
             this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.Location = new System.Drawing.Point(412, 383);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(135, 43);
@@ -197,6 +199,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.AutoSize = false;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.correctLabel,
             this.correctCountLabel,
@@ -212,36 +215,42 @@
             // 
             // correctLabel
             // 
+            this.correctLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.correctLabel.Name = "correctLabel";
             this.correctLabel.Size = new System.Drawing.Size(96, 17);
             this.correctLabel.Text = "Correct Answers:";
             // 
             // correctCountLabel
             // 
+            this.correctCountLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.correctCountLabel.Name = "correctCountLabel";
             this.correctCountLabel.Size = new System.Drawing.Size(13, 17);
             this.correctCountLabel.Text = "0";
             // 
             // wrongLabel
             // 
+            this.wrongLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.wrongLabel.Name = "wrongLabel";
             this.wrongLabel.Size = new System.Drawing.Size(96, 17);
             this.wrongLabel.Text = "Wrong Answers: ";
             // 
             // wrongCountLabel
             // 
+            this.wrongCountLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.wrongCountLabel.Name = "wrongCountLabel";
             this.wrongCountLabel.Size = new System.Drawing.Size(13, 17);
             this.wrongCountLabel.Text = "0";
             // 
             // rateLabel
             // 
+            this.rateLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.rateLabel.Name = "rateLabel";
             this.rateLabel.Size = new System.Drawing.Size(80, 17);
             this.rateLabel.Text = "Success Rate: ";
             // 
             // ratePercentLabel
             // 
+            this.ratePercentLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ratePercentLabel.Name = "ratePercentLabel";
             this.ratePercentLabel.Size = new System.Drawing.Size(35, 17);
             this.ratePercentLabel.Text = "100%";

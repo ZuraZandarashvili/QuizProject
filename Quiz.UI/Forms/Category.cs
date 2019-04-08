@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Quiz.UI.Forms
 {
-    public partial class MainForm : Form
+    public partial class Category : Form
     {
-        public MainForm()
+        public Category()
         {
             InitializeComponent();
         }

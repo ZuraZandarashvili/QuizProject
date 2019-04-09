@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Quiz.UI.Forms
+namespace Quiz.UI.Forms.MainForm_and_helper_forms.Settings_and_helper_forms
 {
-    public partial class MainForm : Form
+    public partial class HighScoreForm : Form
     {
-        public MainForm()
+        public HighScoreForm()
         {
             InitializeComponent();
         }
+
+        
     }
 }

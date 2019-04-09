@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.Exitbutton = new System.Windows.Forms.Button();
+            this.MainExitbutton = new System.Windows.Forms.Button();
             this.Settingsbutton = new System.Windows.Forms.Button();
             this.Categorybutton = new System.Windows.Forms.Button();
             this.QuizpictureBox = new System.Windows.Forms.PictureBox();
@@ -39,21 +39,21 @@
             this.quizpanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Exitbutton
+            // MainExitbutton
             // 
-            this.Exitbutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.MainExitbutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Exitbutton.FlatAppearance.BorderSize = 5;
-            this.Exitbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Exitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exitbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Exitbutton.Location = new System.Drawing.Point(29, 454);
-            this.Exitbutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Exitbutton.Name = "Exitbutton";
-            this.Exitbutton.Size = new System.Drawing.Size(600, 88);
-            this.Exitbutton.TabIndex = 0;
-            this.Exitbutton.Text = "Exit";
-            this.Exitbutton.UseVisualStyleBackColor = true;
+            this.MainExitbutton.FlatAppearance.BorderSize = 5;
+            this.MainExitbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainExitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainExitbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.MainExitbutton.Location = new System.Drawing.Point(29, 454);
+            this.MainExitbutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MainExitbutton.Name = "MainExitbutton";
+            this.MainExitbutton.Size = new System.Drawing.Size(600, 88);
+            this.MainExitbutton.TabIndex = 0;
+            this.MainExitbutton.Text = "Exit";
+            this.MainExitbutton.UseVisualStyleBackColor = true;
             // 
             // Settingsbutton
             // 
@@ -70,6 +70,7 @@
             this.Settingsbutton.TabIndex = 0;
             this.Settingsbutton.Text = "Settings";
             this.Settingsbutton.UseVisualStyleBackColor = true;
+            this.Settingsbutton.Click += new System.EventHandler(this.Settingsbutton_Click);
             // 
             // Categorybutton
             // 
@@ -86,6 +87,7 @@
             this.Categorybutton.TabIndex = 0;
             this.Categorybutton.Text = "Category";
             this.Categorybutton.UseVisualStyleBackColor = true;
+            this.Categorybutton.Click += new System.EventHandler(this.Categorybutton_Click);
             // 
             // QuizpictureBox
             // 
@@ -123,7 +125,7 @@
             this.quizpanel.Controls.Add(this.QuizpictureBox);
             this.quizpanel.Controls.Add(this.Categorybutton);
             this.quizpanel.Controls.Add(this.Settingsbutton);
-            this.quizpanel.Controls.Add(this.Exitbutton);
+            this.quizpanel.Controls.Add(this.MainExitbutton);
             this.quizpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.quizpanel.Location = new System.Drawing.Point(0, 0);
             this.quizpanel.Name = "quizpanel";
@@ -152,7 +154,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Exitbutton;
+        private System.Windows.Forms.Button MainExitbutton;
         private System.Windows.Forms.Button Settingsbutton;
         private System.Windows.Forms.Button Categorybutton;
         private System.Windows.Forms.PictureBox QuizpictureBox;

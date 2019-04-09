@@ -4,11 +4,11 @@ namespace Quiz.Components
 {
     public class AnswerEventArgs : EventArgs
     {
-        public Answers Answers { get; } = null;
+        public Answers Answer { get; } = null;
 
         public AnswerEventArgs(Answers answer)
         {
-            Answers = answer;
+            Answer = answer;
         }
 
     }

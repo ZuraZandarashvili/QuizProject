@@ -98,13 +98,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Quiz.DL\Quiz.Components.csproj">
+    <None Include="Resources\quiz-2432440_1920.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Quiz.BL\Quiz.BL.csproj">
+      <Project>{d7a3c4da-55cd-4661-a0ce-c923d7059446}</Project>
+      <Name>Quiz.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quiz.Components\Quiz.Components.csproj">
       <Project>{54162E3A-BE47-4137-B588-409C06391343}</Project>
       <Name>Quiz.Components</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\quiz-2432440_1920.png" />
+    <ProjectReference Include="..\Quiz.DL\Quiz.DL.csproj">
+      <Project>{EC3BCF3E-8C33-4485-B7E0-2CFE96F93CE9}</Project>
+      <Name>Quiz.DL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

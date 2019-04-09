@@ -7,8 +7,8 @@
     <ProjectGuid>{54162E3A-BE47-4137-B588-409C06391343}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Quiz.DL</RootNamespace>
-    <AssemblyName>Quiz.DL</AssemblyName>
+    <RootNamespace>Quiz.Components</RootNamespace>
+    <AssemblyName>Quiz.Components</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -42,12 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Evaluate.cs" />
+    <Compile Include="EvaluationEventArgs.cs" />
     <Compile Include="Q_A\AnswerEventArgs.cs" />
     <Compile Include="Q_A\Answers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Q_A\QuestionEventArgs.cs" />
     <Compile Include="Q_A\Questions.cs" />
+    <Compile Include="Summarize.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

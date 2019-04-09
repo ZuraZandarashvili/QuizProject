@@ -74,12 +74,12 @@ namespace Quiz.BL
                 OnEnd();
         }
 
-        public void DataBase_AnswerProvided(object sender, AnswerEventArgs e)
+        public void ProvideAnswer(object sender, AnswerEventArgs e)
         {
             Answers.Add(e.Answer);
         }
 
-        public void DataBase_OnLoad(object sender, DatabaseEventArgs e)
+        public void LoadDB(object sender, DatabaseEventArgs e)
         {
             questionNumber = e.NumberOfQuestions;
         }

@@ -140,6 +140,7 @@
             this.radioButtonA.TabStop = true;
             this.radioButtonA.Text = "Possible answer...";
             this.radioButtonA.UseVisualStyleBackColor = true;
+            this.radioButtonA.Click += new System.EventHandler(this.RadioButtonA_Click);
             // 
             // radioButtonB
             // 
@@ -152,6 +153,7 @@
             this.radioButtonB.TabStop = true;
             this.radioButtonB.Text = "Possible answer...";
             this.radioButtonB.UseVisualStyleBackColor = true;
+            this.radioButtonB.Click += new System.EventHandler(this.RadioButtonB_Click);
             // 
             // radioButtonC
             // 
@@ -164,6 +166,7 @@
             this.radioButtonC.TabStop = true;
             this.radioButtonC.Text = "Possible answer...";
             this.radioButtonC.UseVisualStyleBackColor = true;
+            this.radioButtonC.Click += new System.EventHandler(this.RadioButtonC_Click);
             // 
             // radioButtonD
             // 
@@ -176,6 +179,7 @@
             this.radioButtonD.TabStop = true;
             this.radioButtonD.Text = "Possible answer...";
             this.radioButtonD.UseVisualStyleBackColor = true;
+            this.radioButtonD.Click += new System.EventHandler(this.RadioButtonD_Click);
             // 
             // submitButton
             // 
@@ -190,6 +194,7 @@
             this.submitButton.TabIndex = 5;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = false;
+            this.submitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // statusStrip1
             // 
@@ -273,6 +278,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "InGameUI";
             this.Text = "Quiz";
+            this.Load += new System.EventHandler(this.InGameUI_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);

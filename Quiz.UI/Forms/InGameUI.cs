@@ -18,6 +18,20 @@ namespace Quiz.UI.Forms
             quiz = new BL.Quiz();
         }
 
+        private void InGameUI_Load(object sender, EventArgs e)
+        {
+            dataBase.QuestionAcquired += AskQuestion;
+            dataBase.AnswerProvided += quiz.ProvideAnswer;
+            dataBase.DatabaseLoaded += quiz.LoadDB;
+            quiz.AnswerEvaluated += EvaluateAnswer;
+            //quiz.QuizEnded += this.Quiz_QuizEnded;
+
+            dataBase.QueryDatabase();
+            submitButton.Enabled = GetSubmitButtonEnabledState();
+            UpdateStatusPanels(0, 0, 0);
+            //SetupSummaryListView();
+        }
+
         public void AskQuestion(object sender, Components.QuestionEventArgs e)
         {
             Questions q = e.Question;
@@ -28,8 +42,35 @@ namespace Quiz.UI.Forms
             radioButtonC.Text = q.AnswerTextC;
             radioButtonD.Text = q.AnswerTextD;
         }
+        public void EvaluateAnswer(object sender, EvaluationEventArgs e)
+        {
+            UpdateStatusPanels(e.CorrectAnswers, e.WrongAnswers, e.SuccessRate);
+            MessageBox.Show(e.Feedback, "Quiz Challenge", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        //public void Quiz_QuizEnded(object sender, QuizEndEventArgs e)
+        //{
+        //    SummaryPanel.BringToFront();
 
-        #region UI State Management
+        //    foreach (Summarize listItem in e.QuizSummary)
+        //    {
+        //        ListViewItem i = new ListViewItem();
+        //        i.Text = listItem.QuestionNumber.ToString();
+        //        ListViewItem.ListViewSubItem s1 = new ListViewItem.ListViewSubItem();
+        //        s1.Text = listItem.CorrectAnswer;
+        //        i.SubItems.Add(s1);
+        //        ListViewItem.ListViewSubItem s2 = new ListViewItem.ListViewSubItem();
+        //        s2.Text = listItem.SubmittedAnswer;
+        //        i.SubItems.Add(s2);
+        //        ListViewItem.ListViewSubItem s3 = new ListViewItem.ListViewSubItem();
+        //        s3.Text = listItem.Feedback;
+        //        i.SubItems.Add(s3);
+
+        //        listview.Items.Add(i);
+        //    }
+
+        //    anlysisLabel.Text = e.Analysis;
+        //}
+
 
         private void ResetAnswers()
         {
@@ -38,14 +79,12 @@ namespace Quiz.UI.Forms
             radioButtonC.Checked = false;
             radioButtonD.Checked = false;
         }
-
         private void UpdateStatusPanels(int correctAnswered, int incorrectAnswered, double successPercentage)
         {
             correctCountLabel.Text = correctAnswered.ToString();
             wrongCountLabel.Text = incorrectAnswered.ToString();
             ratePercentLabel.Text = $"{successPercentage} %";
         }
-
         private bool GetSubmitButtonEnabledState()
         {
             bool result = false;
@@ -55,17 +94,47 @@ namespace Quiz.UI.Forms
 
             return result;
         }
-        #endregion
 
-        #region Supporting Subroutines
+        //private void Start_Click(object sender, EventArgs e)
+        //{
+        //    questionNumber++;
+        //    m_dataBase.GetQuestion(questionNumber);
+        //    pnlQuestion.BringToFront();
+        //}
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            quiz.Evaluate(questionNumber, GetSelectedAnswer());
+            ResetAnswers();
+                        
+            submitButton.Enabled = GetSubmitButtonEnabledState();
+            questionNumber++;
+            dataBase.GetQuestion(questionNumber);
+        }
+        private void RadioButtonA_Click(object sender, EventArgs e)
+        {
+            submitButton.Enabled = GetSubmitButtonEnabledState();
+        }
+        private void RadioButtonB_Click(object sender, EventArgs e)
+        {
+            submitButton.Enabled = GetSubmitButtonEnabledState();
+        }
+        private void RadioButtonC_Click(object sender, EventArgs e)
+        {
+            submitButton.Enabled = GetSubmitButtonEnabledState();
+        }
+        private void RadioButtonD_Click(object sender, EventArgs e)
+        {
+            submitButton.Enabled = GetSubmitButtonEnabledState();
+        }
 
         private void SetupSummaryListView()
         {
-            //lvwSummary.Columns.Clear();
-            //lvwSummary.Columns.Add("Question", 75, HorizontalAlignment.Left);
-            //lvwSummary.Columns.Add("Correct", 75, HorizontalAlignment.Left);
-            //lvwSummary.Columns.Add("Submitted", 75, HorizontalAlignment.Left);
-            //lvwSummary.Columns.Add("Feedback", 100, HorizontalAlignment.Left);
+            //listview.Columns.Clear();
+            //listview.Columns.Add("Question", 75, HorizontalAlignment.Left);
+            //listview.Columns.Add("Correct", 75, HorizontalAlignment.Left);
+            //listview.Columns.Add("Submitted", 75, HorizontalAlignment.Left);
+            //listview.Columns.Add("Feedback", 100, HorizontalAlignment.Left);
         }
 
         private string GetSelectedAnswer()
@@ -79,8 +148,5 @@ namespace Quiz.UI.Forms
 
             return answer;
         }
-
-        #endregion
-
     }
 }

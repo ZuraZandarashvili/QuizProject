@@ -41,7 +41,7 @@
             this.HighScoureBackbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HighScoureBackbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HighScoureBackbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.HighScoureBackbutton.Location = new System.Drawing.Point(57, 244);
+            this.HighScoureBackbutton.Location = new System.Drawing.Point(66, 259);
             this.HighScoureBackbutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.HighScoureBackbutton.Name = "HighScoureBackbutton";
             this.HighScoureBackbutton.Size = new System.Drawing.Size(531, 88);
@@ -58,7 +58,7 @@
             this.HighScoreUntimedGamebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HighScoreUntimedGamebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HighScoreUntimedGamebutton.ForeColor = System.Drawing.Color.Teal;
-            this.HighScoreUntimedGamebutton.Location = new System.Drawing.Point(57, 146);
+            this.HighScoreUntimedGamebutton.Location = new System.Drawing.Point(66, 161);
             this.HighScoreUntimedGamebutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.HighScoreUntimedGamebutton.Name = "HighScoreUntimedGamebutton";
             this.HighScoreUntimedGamebutton.Size = new System.Drawing.Size(531, 88);
@@ -74,7 +74,7 @@
             this.HighScoreGameOnTimebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HighScoreGameOnTimebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HighScoreGameOnTimebutton.ForeColor = System.Drawing.Color.ForestGreen;
-            this.HighScoreGameOnTimebutton.Location = new System.Drawing.Point(57, 48);
+            this.HighScoreGameOnTimebutton.Location = new System.Drawing.Point(66, 63);
             this.HighScoreGameOnTimebutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.HighScoreGameOnTimebutton.Name = "HighScoreGameOnTimebutton";
             this.HighScoreGameOnTimebutton.Size = new System.Drawing.Size(531, 88);

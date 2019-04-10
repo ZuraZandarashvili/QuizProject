@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MainExitbutton = new System.Windows.Forms.Button();
-            this.Settingsbutton = new System.Windows.Forms.Button();
-            this.Categorybutton = new System.Windows.Forms.Button();
+            this.highScoresButton = new System.Windows.Forms.Button();
+            this.gameModesButton = new System.Windows.Forms.Button();
             this.QuizpictureBox = new System.Windows.Forms.PictureBox();
             this.Startgamebutton = new System.Windows.Forms.Button();
             this.quizpanel = new System.Windows.Forms.Panel();
+            this.contentPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.QuizpictureBox)).BeginInit();
             this.quizpanel.SuspendLayout();
             this.SuspendLayout();
@@ -54,40 +55,41 @@
             this.MainExitbutton.TabIndex = 0;
             this.MainExitbutton.Text = "Exit";
             this.MainExitbutton.UseVisualStyleBackColor = true;
+            this.MainExitbutton.Click += new System.EventHandler(this.MainExitbutton_Click);
             // 
-            // Settingsbutton
+            // highScoresButton
             // 
-            this.Settingsbutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.highScoresButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Settingsbutton.FlatAppearance.BorderSize = 5;
-            this.Settingsbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Settingsbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Settingsbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Settingsbutton.Location = new System.Drawing.Point(29, 356);
-            this.Settingsbutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Settingsbutton.Name = "Settingsbutton";
-            this.Settingsbutton.Size = new System.Drawing.Size(600, 88);
-            this.Settingsbutton.TabIndex = 0;
-            this.Settingsbutton.Text = "Settings";
-            this.Settingsbutton.UseVisualStyleBackColor = true;
-            this.Settingsbutton.Click += new System.EventHandler(this.Settingsbutton_Click);
+            this.highScoresButton.FlatAppearance.BorderSize = 5;
+            this.highScoresButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.highScoresButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highScoresButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.highScoresButton.Location = new System.Drawing.Point(29, 356);
+            this.highScoresButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.highScoresButton.Name = "highScoresButton";
+            this.highScoresButton.Size = new System.Drawing.Size(600, 88);
+            this.highScoresButton.TabIndex = 0;
+            this.highScoresButton.Text = "High Scores";
+            this.highScoresButton.UseVisualStyleBackColor = true;
+            this.highScoresButton.Click += new System.EventHandler(this.HighScoresButton_Click);
             // 
-            // Categorybutton
+            // gameModesButton
             // 
-            this.Categorybutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gameModesButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Categorybutton.FlatAppearance.BorderSize = 5;
-            this.Categorybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Categorybutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Categorybutton.ForeColor = System.Drawing.Color.Blue;
-            this.Categorybutton.Location = new System.Drawing.Point(29, 258);
-            this.Categorybutton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Categorybutton.Name = "Categorybutton";
-            this.Categorybutton.Size = new System.Drawing.Size(600, 88);
-            this.Categorybutton.TabIndex = 0;
-            this.Categorybutton.Text = "Category";
-            this.Categorybutton.UseVisualStyleBackColor = true;
-            this.Categorybutton.Click += new System.EventHandler(this.Categorybutton_Click);
+            this.gameModesButton.FlatAppearance.BorderSize = 5;
+            this.gameModesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gameModesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameModesButton.ForeColor = System.Drawing.Color.Blue;
+            this.gameModesButton.Location = new System.Drawing.Point(29, 258);
+            this.gameModesButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gameModesButton.Name = "gameModesButton";
+            this.gameModesButton.Size = new System.Drawing.Size(600, 88);
+            this.gameModesButton.TabIndex = 0;
+            this.gameModesButton.Text = "Game Modes";
+            this.gameModesButton.UseVisualStyleBackColor = true;
+            this.gameModesButton.Click += new System.EventHandler(this.GameModesButton_Click);
             // 
             // QuizpictureBox
             // 
@@ -116,6 +118,7 @@
             this.Startgamebutton.TabIndex = 0;
             this.Startgamebutton.Text = "Start game";
             this.Startgamebutton.UseVisualStyleBackColor = true;
+            this.Startgamebutton.Click += new System.EventHandler(this.Startgamebutton_Click);
             // 
             // quizpanel
             // 
@@ -123,14 +126,23 @@
             this.quizpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.quizpanel.Controls.Add(this.Startgamebutton);
             this.quizpanel.Controls.Add(this.QuizpictureBox);
-            this.quizpanel.Controls.Add(this.Categorybutton);
-            this.quizpanel.Controls.Add(this.Settingsbutton);
+            this.quizpanel.Controls.Add(this.gameModesButton);
+            this.quizpanel.Controls.Add(this.highScoresButton);
             this.quizpanel.Controls.Add(this.MainExitbutton);
+            this.quizpanel.Controls.Add(this.contentPanel);
             this.quizpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.quizpanel.Location = new System.Drawing.Point(0, 0);
             this.quizpanel.Name = "quizpanel";
             this.quizpanel.Size = new System.Drawing.Size(653, 562);
             this.quizpanel.TabIndex = 3;
+            // 
+            // contentPanel
+            // 
+            this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentPanel.Location = new System.Drawing.Point(0, 0);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Size = new System.Drawing.Size(653, 562);
+            this.contentPanel.TabIndex = 3;
             // 
             // MainForm
             // 
@@ -144,6 +156,7 @@
             this.MaximumSize = new System.Drawing.Size(669, 601);
             this.MinimumSize = new System.Drawing.Size(669, 601);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             ((System.ComponentModel.ISupportInitialize)(this.QuizpictureBox)).EndInit();
             this.quizpanel.ResumeLayout(false);
@@ -155,10 +168,11 @@
         #endregion
 
         private System.Windows.Forms.Button MainExitbutton;
-        private System.Windows.Forms.Button Settingsbutton;
-        private System.Windows.Forms.Button Categorybutton;
+        private System.Windows.Forms.Button highScoresButton;
+        private System.Windows.Forms.Button gameModesButton;
         private System.Windows.Forms.PictureBox QuizpictureBox;
         private System.Windows.Forms.Button Startgamebutton;
         private System.Windows.Forms.Panel quizpanel;
+        private System.Windows.Forms.Panel contentPanel;
     }
 }

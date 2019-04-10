@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quiz.UI.Forms
@@ -19,8 +12,8 @@ namespace Quiz.UI.Forms
 
         private void BeckCategorybutton_Click(object sender, EventArgs e)
         {
-            var mainForm = new MainForm();
-            mainForm.ShowDialog();
+            Owner?.Show();
+            Close();
         }
     }
 }

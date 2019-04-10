@@ -129,6 +129,7 @@
             this.Controls.Add(this.Historybutton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CategoryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Category";
             this.ResumeLayout(false);
 

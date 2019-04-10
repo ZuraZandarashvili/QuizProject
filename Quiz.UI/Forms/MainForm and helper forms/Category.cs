@@ -16,5 +16,11 @@ namespace Quiz.UI.Forms
         {
             InitializeComponent();
         }
+
+        private void BeckCategorybutton_Click(object sender, EventArgs e)
+        {
+            var mainForm = new MainForm();
+            mainForm.ShowDialog();
+        }
     }
 }

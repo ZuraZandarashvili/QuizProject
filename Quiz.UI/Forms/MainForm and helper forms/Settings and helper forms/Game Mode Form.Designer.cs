@@ -1,6 +1,6 @@
 ﻿namespace Quiz.UI.Forms.MainForm_and_helper_forms.Settings_and_helper_forms
 {
-    partial class Game_Mode_Form
+    partial class GameModeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -98,7 +98,7 @@
             this.Backbutton.Text = "Back";
             this.Backbutton.UseVisualStyleBackColor = true;
             // 
-            // Game_Mode_Form
+            // GameModeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,7 +109,7 @@
             this.Controls.Add(this.GameOnTimebutton);
             this.MaximumSize = new System.Drawing.Size(678, 449);
             this.MinimumSize = new System.Drawing.Size(678, 449);
-            this.Name = "Game_Mode_Form";
+            this.Name = "GameModeForm";
             this.Text = "Game_Mode_Form";
             this.ResumeLayout(false);
 

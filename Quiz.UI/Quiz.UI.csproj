@@ -69,6 +69,7 @@
     <Compile Include="Forms\MainForm and helper forms\Settings and helper forms\Game Mode Form.Designer.cs">
       <DependentUpon>Game Mode Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MainForm and helper forms\Settings and helper forms\GameModeForm.cs" />
     <Compile Include="Forms\MainForm and helper forms\Settings and helper forms\HighScoreForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quiz.UI.Forms.MainForm_and_helper_forms.Settings_and_helper_forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,24 @@ namespace Quiz.UI.Forms
         public SettingsForm()
         {
             InitializeComponent();
+        }
+
+        private void BeckSettingsbutton_Click(object sender, EventArgs e)
+        {
+            var mainform = new MainForm();
+            mainform.ShowDialog();
+        }
+
+        private void HighScoresStatisticsbutton_Click(object sender, EventArgs e)
+        {
+            var highScoreForm = new HighScoreForm();
+            highScoreForm.ShowDialog();
+        }
+
+        private void GameModebutton_Click(object sender, EventArgs e)
+        {
+            var gamemode = new GameModeForm();
+            gamemode.ShowDialog();
         }
     }
 }

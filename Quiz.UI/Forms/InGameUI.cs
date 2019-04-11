@@ -83,7 +83,7 @@ namespace Quiz.UI.Forms
         {
             correctCountLabel.Text = correctAnswered.ToString();
             wrongCountLabel.Text = incorrectAnswered.ToString();
-            ratePercentLabel.Text = $"{successPercentage} %";
+            ratePercentLabel.Text = successPercentage.ToString() + "%";
         }
         private bool GetSubmitButtonEnabledState()
         {

@@ -157,6 +157,7 @@
             this.Name = "CategoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Category";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CategoryForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -21,7 +21,7 @@ namespace Quiz.UI.Forms
 
         private void MainExitbutton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Are you sure?", "Exit", MessageBoxButtons.YesNo,                      MessageBoxIcon.Question);
+            var result = MessageBox.Show("Are you sure?", "Exit", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
                 Application.Exit();
         }
@@ -36,11 +36,15 @@ namespace Quiz.UI.Forms
 
         private void HighScoresButton_Click(object sender, EventArgs e)
         {
-
             Hide();
             var highScoresForm = new HighScoreForm();
             highScoresForm.Owner = this;
             highScoresForm.Show();
+        }
+
+        private void CategoryForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Owner?.Show();
         }
     }
 }

@@ -41,5 +41,10 @@ namespace Quiz.UI.Forms
             var gameForm = new InGameUI();
             gameForm.Show();
         }
+
+        private void CategoryForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Owner?.Show();
+        }
     }
 }

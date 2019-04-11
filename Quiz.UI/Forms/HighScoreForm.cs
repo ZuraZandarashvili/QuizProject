@@ -22,10 +22,15 @@ namespace Quiz.UI.Forms
 
         private void HighScoureBackbutton_Click(object sender, EventArgs e)
         {
-            Owner?.Show();
+           
             Close();
         }
 
-       
+        private void CategoryForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Owner?.Show();
+        }
+
+
     }
 }

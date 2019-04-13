@@ -1,6 +1,8 @@
 ﻿using Quiz.Components;
 using Quiz.DL;
+using System;
 using System.Collections;
+using System.Linq;
 
 namespace Quiz.BL
 {
@@ -56,9 +58,7 @@ namespace Quiz.BL
                     }
 
                     anwseredQuestionsCount++;
-
-                    successRate = (correctCount / anwseredQuestionsCount) * 100.00;
-
+                    successRate = ( Convert.ToDouble(correctCount) / Convert.ToDouble(anwseredQuestionsCount)) * 100.00;                    
                     Summarize s = new Summarize(a.QuestionNumber, a.CorrectAnswer, answer, summaryFeedBack);
                     Summary.Add(s);
 

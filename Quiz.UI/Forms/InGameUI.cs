@@ -72,7 +72,7 @@ namespace Quiz.UI.Forms
             //        listview.Items.Add(i);
             //    }
 
-            anlysisLabel.Text = e.Analysis;
+            analysisTextLabel.Text = e.Analysis;
         }
 
 

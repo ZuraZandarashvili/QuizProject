@@ -53,9 +53,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.analysisLabel = new System.Windows.Forms.Label();
             this.analysisTextLabel = new System.Windows.Forms.Label();
+            this.questionPanel = new System.Windows.Forms.Panel();
             this.statusStrip1.SuspendLayout();
             this.statsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.questionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // questionLabel
@@ -63,7 +65,7 @@
             this.questionLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.questionLabel.AutoSize = true;
             this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionLabel.Location = new System.Drawing.Point(406, 50);
+            this.questionLabel.Location = new System.Drawing.Point(406, 32);
             this.questionLabel.Name = "questionLabel";
             this.questionLabel.Size = new System.Drawing.Size(91, 20);
             this.questionLabel.TabIndex = 0;
@@ -74,7 +76,7 @@
             this.questionNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.questionNumberLabel.AutoSize = true;
             this.questionNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionNumberLabel.Location = new System.Drawing.Point(493, 50);
+            this.questionNumberLabel.Location = new System.Drawing.Point(493, 32);
             this.questionNumberLabel.Name = "questionNumberLabel";
             this.questionNumberLabel.Size = new System.Drawing.Size(19, 20);
             this.questionNumberLabel.TabIndex = 0;
@@ -83,7 +85,7 @@
             // questionTextBox
             // 
             this.questionTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.questionTextBox.Location = new System.Drawing.Point(191, 96);
+            this.questionTextBox.Location = new System.Drawing.Point(191, 78);
             this.questionTextBox.Multiline = true;
             this.questionTextBox.Name = "questionTextBox";
             this.questionTextBox.ShortcutsEnabled = false;
@@ -97,7 +99,7 @@
             this.choiceALabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceALabel.AutoSize = true;
             this.choiceALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceALabel.Location = new System.Drawing.Point(200, 251);
+            this.choiceALabel.Location = new System.Drawing.Point(200, 233);
             this.choiceALabel.Name = "choiceALabel";
             this.choiceALabel.Size = new System.Drawing.Size(21, 20);
             this.choiceALabel.TabIndex = 0;
@@ -108,7 +110,7 @@
             this.choiceBLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceBLabel.AutoSize = true;
             this.choiceBLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceBLabel.Location = new System.Drawing.Point(560, 251);
+            this.choiceBLabel.Location = new System.Drawing.Point(560, 233);
             this.choiceBLabel.Name = "choiceBLabel";
             this.choiceBLabel.Size = new System.Drawing.Size(21, 20);
             this.choiceBLabel.TabIndex = 0;
@@ -119,7 +121,7 @@
             this.choiceCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceCLabel.AutoSize = true;
             this.choiceCLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceCLabel.Location = new System.Drawing.Point(200, 301);
+            this.choiceCLabel.Location = new System.Drawing.Point(200, 283);
             this.choiceCLabel.Name = "choiceCLabel";
             this.choiceCLabel.Size = new System.Drawing.Size(21, 20);
             this.choiceCLabel.TabIndex = 0;
@@ -130,7 +132,7 @@
             this.choiceDLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.choiceDLabel.AutoSize = true;
             this.choiceDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choiceDLabel.Location = new System.Drawing.Point(560, 301);
+            this.choiceDLabel.Location = new System.Drawing.Point(560, 283);
             this.choiceDLabel.Name = "choiceDLabel";
             this.choiceDLabel.Size = new System.Drawing.Size(22, 20);
             this.choiceDLabel.TabIndex = 0;
@@ -140,7 +142,7 @@
             // 
             this.radioButtonA.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButtonA.AutoSize = true;
-            this.radioButtonA.Location = new System.Drawing.Point(240, 250);
+            this.radioButtonA.Location = new System.Drawing.Point(240, 232);
             this.radioButtonA.Name = "radioButtonA";
             this.radioButtonA.Size = new System.Drawing.Size(153, 24);
             this.radioButtonA.TabIndex = 1;
@@ -153,7 +155,7 @@
             // 
             this.radioButtonB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButtonB.AutoSize = true;
-            this.radioButtonB.Location = new System.Drawing.Point(600, 250);
+            this.radioButtonB.Location = new System.Drawing.Point(600, 232);
             this.radioButtonB.Name = "radioButtonB";
             this.radioButtonB.Size = new System.Drawing.Size(153, 24);
             this.radioButtonB.TabIndex = 2;
@@ -166,7 +168,7 @@
             // 
             this.radioButtonC.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButtonC.AutoSize = true;
-            this.radioButtonC.Location = new System.Drawing.Point(240, 300);
+            this.radioButtonC.Location = new System.Drawing.Point(240, 282);
             this.radioButtonC.Name = "radioButtonC";
             this.radioButtonC.Size = new System.Drawing.Size(153, 24);
             this.radioButtonC.TabIndex = 3;
@@ -179,7 +181,7 @@
             // 
             this.radioButtonD.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButtonD.AutoSize = true;
-            this.radioButtonD.Location = new System.Drawing.Point(600, 300);
+            this.radioButtonD.Location = new System.Drawing.Point(600, 282);
             this.radioButtonD.Name = "radioButtonD";
             this.radioButtonD.Size = new System.Drawing.Size(153, 24);
             this.radioButtonD.TabIndex = 4;
@@ -195,7 +197,7 @@
             this.submitButton.FlatAppearance.BorderSize = 0;
             this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitButton.Location = new System.Drawing.Point(412, 383);
+            this.submitButton.Location = new System.Drawing.Point(410, 403);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(135, 43);
             this.submitButton.TabIndex = 5;
@@ -268,15 +270,17 @@
             this.statsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.statsPanel.Location = new System.Drawing.Point(0, 0);
             this.statsPanel.Name = "statsPanel";
-            this.statsPanel.Size = new System.Drawing.Size(958, 485);
+            this.statsPanel.Size = new System.Drawing.Size(958, 507);
             this.statsPanel.TabIndex = 6;
             // 
             // listView1
             // 
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.MaximumSize = new System.Drawing.Size(958, 507);
+            this.listView1.MinimumSize = new System.Drawing.Size(958, 507);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(958, 485);
+            this.listView1.Size = new System.Drawing.Size(958, 507);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -285,16 +289,16 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.analysisTextLabel);
             this.panel1.Controls.Add(this.analysisLabel);
-            this.panel1.Location = new System.Drawing.Point(0, 400);
+            this.panel1.Location = new System.Drawing.Point(0, 425);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(958, 85);
+            this.panel1.Size = new System.Drawing.Size(958, 61);
             this.panel1.TabIndex = 1;
             // 
             // analysisLabel
             // 
             this.analysisLabel.AutoSize = true;
             this.analysisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.analysisLabel.Location = new System.Drawing.Point(25, 32);
+            this.analysisLabel.Location = new System.Drawing.Point(25, 20);
             this.analysisLabel.Name = "analysisLabel";
             this.analysisLabel.Size = new System.Drawing.Size(80, 20);
             this.analysisLabel.TabIndex = 0;
@@ -303,10 +307,30 @@
             // analysisTextLabel
             // 
             this.analysisTextLabel.AutoSize = true;
-            this.analysisTextLabel.Location = new System.Drawing.Point(170, 32);
+            this.analysisTextLabel.Location = new System.Drawing.Point(170, 20);
             this.analysisTextLabel.Name = "analysisTextLabel";
             this.analysisTextLabel.Size = new System.Drawing.Size(0, 20);
             this.analysisTextLabel.TabIndex = 1;
+            // 
+            // questionPanel
+            // 
+            this.questionPanel.Controls.Add(this.questionTextBox);
+            this.questionPanel.Controls.Add(this.questionLabel);
+            this.questionPanel.Controls.Add(this.submitButton);
+            this.questionPanel.Controls.Add(this.radioButtonD);
+            this.questionPanel.Controls.Add(this.questionNumberLabel);
+            this.questionPanel.Controls.Add(this.radioButtonC);
+            this.questionPanel.Controls.Add(this.choiceALabel);
+            this.questionPanel.Controls.Add(this.radioButtonB);
+            this.questionPanel.Controls.Add(this.choiceBLabel);
+            this.questionPanel.Controls.Add(this.radioButtonA);
+            this.questionPanel.Controls.Add(this.choiceCLabel);
+            this.questionPanel.Controls.Add(this.choiceDLabel);
+            this.questionPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.questionPanel.Location = new System.Drawing.Point(0, 0);
+            this.questionPanel.Name = "questionPanel";
+            this.questionPanel.Size = new System.Drawing.Size(958, 507);
+            this.questionPanel.TabIndex = 2;
             // 
             // InGameUI
             // 
@@ -314,23 +338,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(958, 507);
-            this.Controls.Add(this.statsPanel);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.submitButton);
-            this.Controls.Add(this.radioButtonD);
-            this.Controls.Add(this.radioButtonC);
-            this.Controls.Add(this.radioButtonB);
-            this.Controls.Add(this.radioButtonA);
-            this.Controls.Add(this.choiceDLabel);
-            this.Controls.Add(this.choiceCLabel);
-            this.Controls.Add(this.choiceBLabel);
-            this.Controls.Add(this.choiceALabel);
-            this.Controls.Add(this.questionTextBox);
-            this.Controls.Add(this.questionNumberLabel);
-            this.Controls.Add(this.questionLabel);
+            this.Controls.Add(this.statsPanel);
+            this.Controls.Add(this.questionPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(974, 546);
+            this.MinimumSize = new System.Drawing.Size(974, 546);
             this.Name = "InGameUI";
             this.Text = "Quiz";
             this.Load += new System.EventHandler(this.InGameUI_Load);
@@ -339,8 +354,9 @@
             this.statsPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.questionPanel.ResumeLayout(false);
+            this.questionPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -370,5 +386,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label analysisTextLabel;
         private System.Windows.Forms.Label analysisLabel;
+        private System.Windows.Forms.Panel questionPanel;
     }
 }

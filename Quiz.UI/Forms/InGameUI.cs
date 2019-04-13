@@ -25,7 +25,7 @@ namespace Quiz.UI.Forms
             dataBase.AnswerProvided += quiz.ProvideAnswer;
             dataBase.DatabaseLoaded += quiz.LoadDB;
             quiz.AnswerEvaluated += EvaluateAnswer;
-            //quiz.QuizEnded += this.Quiz_QuizEnded;
+            quiz.QuizEnded += Quiz_QuizEnded;
 
             dataBase.QueryDatabase();
             submitButton.Enabled = GetSubmitButtonEnabledState();
@@ -55,22 +55,22 @@ namespace Quiz.UI.Forms
         {
             statsPanel.BringToFront();
 
-            //    foreach (Summarize listItem in e.QuizSummary)
-            //    {
-            //        ListViewItem i = new ListViewItem();
-            //        i.Text = listItem.QuestionNumber.ToString();
-            //        ListViewItem.ListViewSubItem s1 = new ListViewItem.ListViewSubItem();
-            //        s1.Text = listItem.CorrectAnswer;
-            //        i.SubItems.Add(s1);
-            //        ListViewItem.ListViewSubItem s2 = new ListViewItem.ListViewSubItem();
-            //        s2.Text = listItem.SubmittedAnswer;
-            //        i.SubItems.Add(s2);
-            //        ListViewItem.ListViewSubItem s3 = new ListViewItem.ListViewSubItem();
-            //        s3.Text = listItem.Feedback;
-            //        i.SubItems.Add(s3);
+            foreach (Summarize listItem in e.QuizSummary)
+            {
+                ListViewItem i = new ListViewItem();
+                i.Text = listItem.QuestionNumber.ToString();
+                ListViewItem.ListViewSubItem s1 = new ListViewItem.ListViewSubItem();
+                s1.Text = listItem.CorrectAnswer;
+                i.SubItems.Add(s1);
+                ListViewItem.ListViewSubItem s2 = new ListViewItem.ListViewSubItem();
+                s2.Text = listItem.SubmittedAnswer;
+                i.SubItems.Add(s2);
+                ListViewItem.ListViewSubItem s3 = new ListViewItem.ListViewSubItem();
+                s3.Text = listItem.Feedback;
+                i.SubItems.Add(s3);
 
-            //        listview.Items.Add(i);
-            //    }
+                listView1.Items.Add(i);
+            }
 
             analysisTextLabel.Text = e.Analysis;
         }
@@ -98,13 +98,6 @@ namespace Quiz.UI.Forms
 
             return result;
         }
-
-        //private void Start_Click(object sender, EventArgs e)
-        //{
-        //    questionNumber++;
-        //    m_dataBase.GetQuestion(questionNumber);
-        //    pnlQuestion.BringToFront();
-        //}
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InGameUI));
             this.questionLabel = new System.Windows.Forms.Label();
             this.questionNumberLabel = new System.Windows.Forms.Label();
@@ -49,14 +50,17 @@
             this.rateLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ratePercentLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.statsPanel = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.analysisLabel = new System.Windows.Forms.Label();
+            this.analysisPanel = new System.Windows.Forms.Panel();
             this.analysisTextLabel = new System.Windows.Forms.Label();
+            this.analysisLabel = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.questionPanel = new System.Windows.Forms.Panel();
+            this.timerLabel = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1.SuspendLayout();
             this.statsPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.analysisPanel.SuspendLayout();
             this.questionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +89,7 @@
             // questionTextBox
             // 
             this.questionTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.questionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionTextBox.Location = new System.Drawing.Point(191, 78);
             this.questionTextBox.Multiline = true;
             this.questionTextBox.Name = "questionTextBox";
@@ -93,6 +98,7 @@
             this.questionTextBox.TabIndex = 0;
             this.questionTextBox.TabStop = false;
             this.questionTextBox.Text = "Questions display here...";
+            this.questionTextBox.Visible = false;
             // 
             // choiceALabel
             // 
@@ -197,7 +203,7 @@
             this.submitButton.FlatAppearance.BorderSize = 0;
             this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitButton.Location = new System.Drawing.Point(410, 403);
+            this.submitButton.Location = new System.Drawing.Point(410, 381);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(135, 43);
             this.submitButton.TabIndex = 5;
@@ -265,34 +271,30 @@
             // 
             // statsPanel
             // 
-            this.statsPanel.Controls.Add(this.panel1);
+            this.statsPanel.Controls.Add(this.analysisPanel);
             this.statsPanel.Controls.Add(this.listView1);
-            this.statsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statsPanel.Location = new System.Drawing.Point(0, 0);
+            this.statsPanel.Location = new System.Drawing.Point(564, 339);
             this.statsPanel.Name = "statsPanel";
-            this.statsPanel.Size = new System.Drawing.Size(958, 507);
+            this.statsPanel.Size = new System.Drawing.Size(958, 475);
             this.statsPanel.TabIndex = 6;
             // 
-            // listView1
+            // analysisPanel
             // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.MaximumSize = new System.Drawing.Size(958, 507);
-            this.listView1.MinimumSize = new System.Drawing.Size(958, 507);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(958, 507);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.analysisPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.analysisPanel.Controls.Add(this.analysisTextLabel);
+            this.analysisPanel.Controls.Add(this.analysisLabel);
+            this.analysisPanel.Location = new System.Drawing.Point(0, 421);
+            this.analysisPanel.Name = "analysisPanel";
+            this.analysisPanel.Size = new System.Drawing.Size(958, 61);
+            this.analysisPanel.TabIndex = 1;
             // 
-            // panel1
+            // analysisTextLabel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.analysisTextLabel);
-            this.panel1.Controls.Add(this.analysisLabel);
-            this.panel1.Location = new System.Drawing.Point(0, 425);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(958, 61);
-            this.panel1.TabIndex = 1;
+            this.analysisTextLabel.AutoSize = true;
+            this.analysisTextLabel.Location = new System.Drawing.Point(170, 20);
+            this.analysisTextLabel.Name = "analysisTextLabel";
+            this.analysisTextLabel.Size = new System.Drawing.Size(0, 20);
+            this.analysisTextLabel.TabIndex = 1;
             // 
             // analysisLabel
             // 
@@ -304,17 +306,17 @@
             this.analysisLabel.TabIndex = 0;
             this.analysisLabel.Text = "Analysis:";
             // 
-            // analysisTextLabel
+            // listView1
             // 
-            this.analysisTextLabel.AutoSize = true;
-            this.analysisTextLabel.Location = new System.Drawing.Point(170, 20);
-            this.analysisTextLabel.Name = "analysisTextLabel";
-            this.analysisTextLabel.Size = new System.Drawing.Size(0, 20);
-            this.analysisTextLabel.TabIndex = 1;
+            this.listView1.Location = new System.Drawing.Point(227, 32);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(356, 456);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // questionPanel
             // 
-            this.questionPanel.Controls.Add(this.questionTextBox);
+            this.questionPanel.Controls.Add(this.statsPanel);
             this.questionPanel.Controls.Add(this.questionLabel);
             this.questionPanel.Controls.Add(this.submitButton);
             this.questionPanel.Controls.Add(this.radioButtonD);
@@ -326,11 +328,39 @@
             this.questionPanel.Controls.Add(this.radioButtonA);
             this.questionPanel.Controls.Add(this.choiceCLabel);
             this.questionPanel.Controls.Add(this.choiceDLabel);
+            this.questionPanel.Controls.Add(this.questionTextBox);
+            this.questionPanel.Controls.Add(this.timerLabel);
+            this.questionPanel.Controls.Add(this.timeLabel);
             this.questionPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.questionPanel.Location = new System.Drawing.Point(0, 0);
             this.questionPanel.Name = "questionPanel";
-            this.questionPanel.Size = new System.Drawing.Size(958, 507);
+            this.questionPanel.Size = new System.Drawing.Size(958, 485);
             this.questionPanel.TabIndex = 2;
+            // 
+            // timerLabel
+            // 
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timerLabel.Location = new System.Drawing.Point(760, 28);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(122, 20);
+            this.timerLabel.TabIndex = 8;
+            this.timerLabel.Text = "Time Elapsed:";
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLabel.Location = new System.Drawing.Point(884, 21);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(30, 31);
+            this.timeLabel.TabIndex = 7;
+            this.timeLabel.Text = "0";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // InGameUI
             // 
@@ -338,22 +368,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(958, 507);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.statsPanel);
             this.Controls.Add(this.questionPanel);
+            this.Controls.Add(this.statusStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximumSize = new System.Drawing.Size(974, 546);
             this.MinimumSize = new System.Drawing.Size(974, 546);
             this.Name = "InGameUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quiz";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InGameUI_FormClosed);
             this.Load += new System.EventHandler(this.InGameUI_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.statsPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.analysisPanel.ResumeLayout(false);
+            this.analysisPanel.PerformLayout();
             this.questionPanel.ResumeLayout(false);
             this.questionPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -383,9 +414,12 @@
         private System.Windows.Forms.ToolStripStatusLabel ratePercentLabel;
         private System.Windows.Forms.Panel statsPanel;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel analysisPanel;
         private System.Windows.Forms.Label analysisTextLabel;
         private System.Windows.Forms.Label analysisLabel;
         private System.Windows.Forms.Panel questionPanel;
+        private System.Windows.Forms.Label timerLabel;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }

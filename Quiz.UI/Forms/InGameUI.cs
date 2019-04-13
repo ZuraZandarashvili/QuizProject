@@ -11,12 +11,14 @@ namespace Quiz.UI.Forms
         private Database dataBase = null;
         private BL.Quiz quiz = null;
         private int questionNumber = 0;
+        private int ticks;
 
         public InGameUI()
         {
             InitializeComponent();
             dataBase = new Database();
             quiz = new BL.Quiz();
+            timer1.Start();
         }
 
         private void InGameUI_Load(object sender, EventArgs e)
@@ -87,7 +89,7 @@ namespace Quiz.UI.Forms
         {
             correctCountLabel.Text = correctAnswered.ToString();
             wrongCountLabel.Text = incorrectAnswered.ToString();
-            ratePercentLabel.Text = successPercentage.ToString() + "%";
+            ratePercentLabel.Text = successPercentage.ToString("#.##") + "%";
         }
         private bool GetSubmitButtonEnabledState()
         {
@@ -144,6 +146,24 @@ namespace Quiz.UI.Forms
             if (radioButtonD.Checked == true) { answer = "D"; }
 
             return answer;
+        }
+
+        private void InGameUI_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            var mainForm = new MainForm();
+            mainForm.Show();                       
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            ticks++;
+            timeLabel.Text = ticks.ToString();
+            if (timeLabel.Text == "10")
+            {
+                timer1.Stop();
+                statsPanel.BringToFront();
+              //  MessageBox.Show("Sorry, you are out of time!", "Times up", MessageBoxButtons.OK);
+            }
         }
     }
 }

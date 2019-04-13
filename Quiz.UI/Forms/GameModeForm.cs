@@ -12,8 +12,13 @@ namespace Quiz.UI.Forms
 
         private void Backbutton_Click(object sender, EventArgs e)
         {
-            Owner?.Show();
             Close();
+        }
+
+        private void GameModeForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Owner?.Show();
+
         }
     }
 }

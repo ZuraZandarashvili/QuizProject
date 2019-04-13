@@ -95,6 +95,7 @@
             this.Name = "GameModeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game_Mode_Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameModeForm_FormClosing);
             this.ResumeLayout(false);
 
         }

@@ -26,11 +26,12 @@ namespace Quiz.UI.Forms
             Close();
         }
 
-        private void CategoryForm_FormClosing(object sender, FormClosingEventArgs e)
+       
+
+        private void HighScoreForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Owner?.Show();
+
         }
-
-
     }
 }

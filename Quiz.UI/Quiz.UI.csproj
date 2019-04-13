@@ -57,12 +57,6 @@
     <Compile Include="Forms\InGameUI.Designer.cs">
       <DependentUpon>InGameUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ListViewForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ListViewForm.Designer.cs">
-      <DependentUpon>ListViewForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,9 +83,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InGameUI.resx">
       <DependentUpon>InGameUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ListViewForm.resx">
-      <DependentUpon>ListViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

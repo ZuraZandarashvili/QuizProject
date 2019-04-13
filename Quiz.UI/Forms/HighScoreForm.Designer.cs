@@ -108,6 +108,7 @@
             this.Name = "HighScoreForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HighScoreForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HighScoreForm_FormClosing);
             this.ResumeLayout(false);
 
         }

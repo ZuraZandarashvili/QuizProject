@@ -1,4 +1,5 @@
-﻿using Quiz.Components;
+﻿using Quiz.BL;
+using Quiz.Components;
 using Quiz.DL;
 using System;
 using System.Windows.Forms;
@@ -29,7 +30,10 @@ namespace Quiz.UI.Forms
             dataBase.QueryDatabase();
             submitButton.Enabled = GetSubmitButtonEnabledState();
             UpdateStatusPanels(0, 0, 0);
-            //SetupSummaryListView();
+            SetupSummaryListView();
+            questionNumber++;
+            dataBase.GetQuestion(questionNumber);
+            statsPanel.SendToBack();
         }
 
         public void AskQuestion(object sender, Components.QuestionEventArgs e)
@@ -47,29 +51,29 @@ namespace Quiz.UI.Forms
             UpdateStatusPanels(e.CorrectAnswers, e.WrongAnswers, e.SuccessRate);
             MessageBox.Show(e.Feedback, "Quiz Challenge", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        //public void Quiz_QuizEnded(object sender, QuizEndEventArgs e)
-        //{
-        //    SummaryPanel.BringToFront();
+        public void Quiz_QuizEnded(object sender, QuizEndEventArgs e)
+        {
+            statsPanel.BringToFront();
 
-        //    foreach (Summarize listItem in e.QuizSummary)
-        //    {
-        //        ListViewItem i = new ListViewItem();
-        //        i.Text = listItem.QuestionNumber.ToString();
-        //        ListViewItem.ListViewSubItem s1 = new ListViewItem.ListViewSubItem();
-        //        s1.Text = listItem.CorrectAnswer;
-        //        i.SubItems.Add(s1);
-        //        ListViewItem.ListViewSubItem s2 = new ListViewItem.ListViewSubItem();
-        //        s2.Text = listItem.SubmittedAnswer;
-        //        i.SubItems.Add(s2);
-        //        ListViewItem.ListViewSubItem s3 = new ListViewItem.ListViewSubItem();
-        //        s3.Text = listItem.Feedback;
-        //        i.SubItems.Add(s3);
+            //    foreach (Summarize listItem in e.QuizSummary)
+            //    {
+            //        ListViewItem i = new ListViewItem();
+            //        i.Text = listItem.QuestionNumber.ToString();
+            //        ListViewItem.ListViewSubItem s1 = new ListViewItem.ListViewSubItem();
+            //        s1.Text = listItem.CorrectAnswer;
+            //        i.SubItems.Add(s1);
+            //        ListViewItem.ListViewSubItem s2 = new ListViewItem.ListViewSubItem();
+            //        s2.Text = listItem.SubmittedAnswer;
+            //        i.SubItems.Add(s2);
+            //        ListViewItem.ListViewSubItem s3 = new ListViewItem.ListViewSubItem();
+            //        s3.Text = listItem.Feedback;
+            //        i.SubItems.Add(s3);
 
-        //        listview.Items.Add(i);
-        //    }
+            //        listview.Items.Add(i);
+            //    }
 
-        //    anlysisLabel.Text = e.Analysis;
-        //}
+            anlysisLabel.Text = e.Analysis;
+        }
 
 
         private void ResetAnswers()
@@ -128,13 +132,13 @@ namespace Quiz.UI.Forms
             submitButton.Enabled = GetSubmitButtonEnabledState();
         }
 
-        private void SetupSummaryListView()
+        public void SetupSummaryListView()
         {
-            //listview.Columns.Clear();
-            //listview.Columns.Add("Question", 75, HorizontalAlignment.Left);
-            //listview.Columns.Add("Correct", 75, HorizontalAlignment.Left);
-            //listview.Columns.Add("Submitted", 75, HorizontalAlignment.Left);
-            //listview.Columns.Add("Feedback", 100, HorizontalAlignment.Left);
+            listView1.Columns.Clear();
+            listView1.Columns.Add("Question", 75, HorizontalAlignment.Left);
+            listView1.Columns.Add("Correct", 75, HorizontalAlignment.Left);
+            listView1.Columns.Add("Submitted", 75, HorizontalAlignment.Left);
+            listView1.Columns.Add("Feedback", 100, HorizontalAlignment.Left);
         }
 
         private string GetSelectedAnswer()

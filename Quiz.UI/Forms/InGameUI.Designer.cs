@@ -48,7 +48,14 @@
             this.wrongCountLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.rateLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ratePercentLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statsPanel = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.analysisLabel = new System.Windows.Forms.Label();
+            this.analysisTextLabel = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
+            this.statsPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // questionLabel
@@ -254,12 +261,60 @@
             this.ratePercentLabel.Size = new System.Drawing.Size(13, 17);
             this.ratePercentLabel.Text = "0";
             // 
+            // statsPanel
+            // 
+            this.statsPanel.Controls.Add(this.panel1);
+            this.statsPanel.Controls.Add(this.listView1);
+            this.statsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statsPanel.Location = new System.Drawing.Point(0, 0);
+            this.statsPanel.Name = "statsPanel";
+            this.statsPanel.Size = new System.Drawing.Size(958, 485);
+            this.statsPanel.TabIndex = 6;
+            // 
+            // listView1
+            // 
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(958, 485);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.analysisTextLabel);
+            this.panel1.Controls.Add(this.analysisLabel);
+            this.panel1.Location = new System.Drawing.Point(0, 400);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(958, 85);
+            this.panel1.TabIndex = 1;
+            // 
+            // analysisLabel
+            // 
+            this.analysisLabel.AutoSize = true;
+            this.analysisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.analysisLabel.Location = new System.Drawing.Point(25, 32);
+            this.analysisLabel.Name = "analysisLabel";
+            this.analysisLabel.Size = new System.Drawing.Size(80, 20);
+            this.analysisLabel.TabIndex = 0;
+            this.analysisLabel.Text = "Analysis:";
+            // 
+            // analysisTextLabel
+            // 
+            this.analysisTextLabel.AutoSize = true;
+            this.analysisTextLabel.Location = new System.Drawing.Point(170, 32);
+            this.analysisTextLabel.Name = "analysisTextLabel";
+            this.analysisTextLabel.Size = new System.Drawing.Size(0, 20);
+            this.analysisTextLabel.TabIndex = 1;
+            // 
             // InGameUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(958, 507);
+            this.Controls.Add(this.statsPanel);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.radioButtonD);
@@ -281,6 +336,9 @@
             this.Load += new System.EventHandler(this.InGameUI_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.statsPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +365,10 @@
         private System.Windows.Forms.ToolStripStatusLabel wrongCountLabel;
         private System.Windows.Forms.ToolStripStatusLabel rateLabel;
         private System.Windows.Forms.ToolStripStatusLabel ratePercentLabel;
+        private System.Windows.Forms.Panel statsPanel;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label analysisTextLabel;
+        private System.Windows.Forms.Label analysisLabel;
     }
 }

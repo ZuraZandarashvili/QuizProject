@@ -93,12 +93,12 @@
             this.questionTextBox.Location = new System.Drawing.Point(191, 78);
             this.questionTextBox.Multiline = true;
             this.questionTextBox.Name = "questionTextBox";
+            this.questionTextBox.ReadOnly = true;
             this.questionTextBox.ShortcutsEnabled = false;
             this.questionTextBox.Size = new System.Drawing.Size(577, 109);
             this.questionTextBox.TabIndex = 0;
             this.questionTextBox.TabStop = false;
             this.questionTextBox.Text = "Questions display here...";
-            this.questionTextBox.Visible = false;
             // 
             // choiceALabel
             // 
@@ -273,14 +273,15 @@
             // 
             this.statsPanel.Controls.Add(this.analysisPanel);
             this.statsPanel.Controls.Add(this.listView1);
-            this.statsPanel.Location = new System.Drawing.Point(564, 339);
+            this.statsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statsPanel.Location = new System.Drawing.Point(0, 0);
             this.statsPanel.Name = "statsPanel";
-            this.statsPanel.Size = new System.Drawing.Size(958, 475);
+            this.statsPanel.Size = new System.Drawing.Size(958, 485);
             this.statsPanel.TabIndex = 6;
             // 
             // analysisPanel
             // 
-            this.analysisPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.analysisPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.analysisPanel.Controls.Add(this.analysisTextLabel);
             this.analysisPanel.Controls.Add(this.analysisLabel);
             this.analysisPanel.Location = new System.Drawing.Point(0, 421);
@@ -291,7 +292,7 @@
             // analysisTextLabel
             // 
             this.analysisTextLabel.AutoSize = true;
-            this.analysisTextLabel.Location = new System.Drawing.Point(170, 20);
+            this.analysisTextLabel.Location = new System.Drawing.Point(498, 20);
             this.analysisTextLabel.Name = "analysisTextLabel";
             this.analysisTextLabel.Size = new System.Drawing.Size(0, 20);
             this.analysisTextLabel.TabIndex = 1;
@@ -300,7 +301,7 @@
             // 
             this.analysisLabel.AutoSize = true;
             this.analysisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.analysisLabel.Location = new System.Drawing.Point(25, 20);
+            this.analysisLabel.Location = new System.Drawing.Point(398, 20);
             this.analysisLabel.Name = "analysisLabel";
             this.analysisLabel.Size = new System.Drawing.Size(80, 20);
             this.analysisLabel.TabIndex = 0;
@@ -308,9 +309,11 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(227, 32);
+            this.listView1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(356, 456);
+            this.listView1.Size = new System.Drawing.Size(958, 485);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -341,7 +344,7 @@
             // 
             this.timerLabel.AutoSize = true;
             this.timerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timerLabel.Location = new System.Drawing.Point(760, 28);
+            this.timerLabel.Location = new System.Drawing.Point(778, 27);
             this.timerLabel.Name = "timerLabel";
             this.timerLabel.Size = new System.Drawing.Size(122, 20);
             this.timerLabel.TabIndex = 8;
@@ -351,7 +354,7 @@
             // 
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(884, 21);
+            this.timeLabel.Location = new System.Drawing.Point(896, 20);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(30, 31);
             this.timeLabel.TabIndex = 7;

@@ -109,13 +109,13 @@ namespace Quiz.DL
             Question.Rows.Add(6, "What's the capital of Venezuela?", "D");
             Question.Rows.Add(7, "Where can we find the old region of Abyssinia today?", "A");
             Question.Rows.Add(8, "What is Earth's largest continent by surface size?", "D");
-            Question.Rows.Add(9, "Which continent the most independent countries?", "C");
+            Question.Rows.Add(9, "Which continent has the most independent countries?", "C");
             Question.Rows.Add(10, "What is Earth's approximate water vs land coverage ratio?", "B");
             Question.Rows.Add(11, "How many oceans are on Earth?", "C");
-            Question.Rows.Add(12, "What is the northermost capital of an independant nation int he world?", "C");
+            Question.Rows.Add(12, "What is the northermost capital of an independant nation in the world?", "C");
             Question.Rows.Add(13, "What is the largest desert on Earth?", "A");
             Question.Rows.Add(14, "Which country has the largest population in South America?", "C");
-            Question.Rows.Add(15, "In which country is the Andgels Falls located?", "D");
+            Question.Rows.Add(15, "In which country is the Angels Falls located?", "D");
             Question.Rows.Add(16, "What is the second largest continent by population size?", "B");
             Question.Rows.Add(17, "Which of these countries has three national capitals?", "A");
             Question.Rows.Add(18, "Which of these countries is the owner of Greenland?", "C");

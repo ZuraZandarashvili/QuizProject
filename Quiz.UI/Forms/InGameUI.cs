@@ -33,9 +33,11 @@ namespace Quiz.UI.Forms
             submitButton.Enabled = GetSubmitButtonEnabledState();
             UpdateStatusPanels(0, 0, 0);
             SetupSummaryListView();
+
             questionNumber++;
             dataBase.GetQuestion(questionNumber);
             statsPanel.SendToBack();
+            analysisPanel.SendToBack();
         }
 
         public void AskQuestion(object sender, Components.QuestionEventArgs e)
@@ -56,7 +58,7 @@ namespace Quiz.UI.Forms
         public void Quiz_QuizEnded(object sender, QuizEndEventArgs e)
         {
             statsPanel.BringToFront();
-
+            analysisPanel.BringToFront();
             foreach (Summarize listItem in e.QuizSummary)
             {
                 ListViewItem i = new ListViewItem();
@@ -158,11 +160,12 @@ namespace Quiz.UI.Forms
         {
             ticks++;
             timeLabel.Text = ticks.ToString();
-            if (timeLabel.Text == "10")
+            if (timeLabel.Text == "300")
             {
                 timer1.Stop();
                 statsPanel.BringToFront();
-              //  MessageBox.Show("Sorry, you are out of time!", "Times up", MessageBoxButtons.OK);
+                analysisPanel.BringToFront();
+                MessageBox.Show("Sorry, you are out of time!", "Times up", MessageBoxButtons.OK);
             }
         }
     }

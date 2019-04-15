@@ -50,17 +50,17 @@
             this.rateLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ratePercentLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.statsPanel = new System.Windows.Forms.Panel();
-            this.analysisPanel = new System.Windows.Forms.Panel();
-            this.analysisTextLabel = new System.Windows.Forms.Label();
-            this.analysisLabel = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.questionPanel = new System.Windows.Forms.Panel();
             this.timerLabel = new System.Windows.Forms.Label();
             this.timeLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.statusStrip1.SuspendLayout();
             this.statsPanel.SuspendLayout();
-            this.analysisPanel.SuspendLayout();
             this.questionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -271,7 +271,6 @@
             // 
             // statsPanel
             // 
-            this.statsPanel.Controls.Add(this.analysisPanel);
             this.statsPanel.Controls.Add(this.listView1);
             this.statsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.statsPanel.Location = new System.Drawing.Point(0, 0);
@@ -279,43 +278,21 @@
             this.statsPanel.Size = new System.Drawing.Size(958, 485);
             this.statsPanel.TabIndex = 6;
             // 
-            // analysisPanel
-            // 
-            this.analysisPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.analysisPanel.Controls.Add(this.analysisTextLabel);
-            this.analysisPanel.Controls.Add(this.analysisLabel);
-            this.analysisPanel.Location = new System.Drawing.Point(0, 421);
-            this.analysisPanel.Name = "analysisPanel";
-            this.analysisPanel.Size = new System.Drawing.Size(958, 61);
-            this.analysisPanel.TabIndex = 1;
-            // 
-            // analysisTextLabel
-            // 
-            this.analysisTextLabel.AutoSize = true;
-            this.analysisTextLabel.Location = new System.Drawing.Point(498, 20);
-            this.analysisTextLabel.Name = "analysisTextLabel";
-            this.analysisTextLabel.Size = new System.Drawing.Size(0, 20);
-            this.analysisTextLabel.TabIndex = 1;
-            // 
-            // analysisLabel
-            // 
-            this.analysisLabel.AutoSize = true;
-            this.analysisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.analysisLabel.Location = new System.Drawing.Point(398, 20);
-            this.analysisLabel.Name = "analysisLabel";
-            this.analysisLabel.Size = new System.Drawing.Size(80, 20);
-            this.analysisLabel.TabIndex = 0;
-            this.analysisLabel.Text = "Analysis:";
-            // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(958, 485);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // questionPanel
             // 
@@ -365,6 +342,26 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Question";
+            this.columnHeader1.Width = 128;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "CorrectAnswers";
+            this.columnHeader2.Width = 144;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "SubmittedAnswer";
+            this.columnHeader3.Width = 161;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Feedback";
+            this.columnHeader4.Width = 173;
+            // 
             // InGameUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -386,8 +383,6 @@
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.statsPanel.ResumeLayout(false);
-            this.analysisPanel.ResumeLayout(false);
-            this.analysisPanel.PerformLayout();
             this.questionPanel.ResumeLayout(false);
             this.questionPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -417,12 +412,13 @@
         private System.Windows.Forms.ToolStripStatusLabel ratePercentLabel;
         private System.Windows.Forms.Panel statsPanel;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Panel analysisPanel;
-        private System.Windows.Forms.Label analysisTextLabel;
-        private System.Windows.Forms.Label analysisLabel;
         private System.Windows.Forms.Panel questionPanel;
         private System.Windows.Forms.Label timerLabel;
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

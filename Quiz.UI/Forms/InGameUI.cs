@@ -37,7 +37,7 @@ namespace Quiz.UI.Forms
             questionNumber++;
             dataBase.GetQuestion(questionNumber);
             statsPanel.SendToBack();
-            analysisPanel.SendToBack();
+            listView1.Hide();
         }
 
         public void AskQuestion(object sender, Components.QuestionEventArgs e)
@@ -57,8 +57,9 @@ namespace Quiz.UI.Forms
         }
         public void Quiz_QuizEnded(object sender, QuizEndEventArgs e)
         {
+            timer1.Stop();
             statsPanel.BringToFront();
-            analysisPanel.BringToFront();
+            listView1.Show();
             foreach (Summarize listItem in e.QuizSummary)
             {
                 ListViewItem i = new ListViewItem();
@@ -75,8 +76,6 @@ namespace Quiz.UI.Forms
 
                 listView1.Items.Add(i);
             }
-
-            analysisTextLabel.Text = e.Analysis;
         }
 
 
@@ -132,10 +131,10 @@ namespace Quiz.UI.Forms
         public void SetupSummaryListView()
         {
             listView1.Columns.Clear();
-            listView1.Columns.Add("Question", 75, HorizontalAlignment.Left);
-            listView1.Columns.Add("Correct", 75, HorizontalAlignment.Left);
-            listView1.Columns.Add("Submitted", 75, HorizontalAlignment.Left);
-            listView1.Columns.Add("Feedback", 100, HorizontalAlignment.Left);
+            listView1.Columns.Add("Question", 200, HorizontalAlignment.Left);
+            listView1.Columns.Add("Correct", 200, HorizontalAlignment.Left);
+            listView1.Columns.Add("Submitted", 200, HorizontalAlignment.Left);
+            listView1.Columns.Add("Feedback", 200, HorizontalAlignment.Left);
         }
 
         private string GetSelectedAnswer()
@@ -153,18 +152,19 @@ namespace Quiz.UI.Forms
         private void InGameUI_FormClosed(object sender, FormClosedEventArgs e)
         {
             var mainForm = new MainForm();
-            mainForm.Show();                       
+            mainForm.Show();
+
+            //Application.Exit();
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
             ticks++;
             timeLabel.Text = ticks.ToString();
-            if (timeLabel.Text == "300")
+            if (timeLabel.Text == "300" )
             {
                 timer1.Stop();
                 statsPanel.BringToFront();
-                analysisPanel.BringToFront();
                 MessageBox.Show("Sorry, you are out of time!", "Times up", MessageBoxButtons.OK);
             }
         }

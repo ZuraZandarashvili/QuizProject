@@ -42,7 +42,7 @@ namespace Quiz.UI.Forms
             highScoresForm.Show();
         }
 
-        private void CategoryForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Owner?.Show();
         }

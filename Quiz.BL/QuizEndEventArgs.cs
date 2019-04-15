@@ -6,11 +6,9 @@ namespace Quiz.BL
     public class QuizEndEventArgs : EventArgs
     {
         public ArrayList QuizSummary { get; } = null;
-        public string Analysis { get; } = string.Empty;
 
-        public QuizEndEventArgs(ArrayList summary, string analysis)
+        public QuizEndEventArgs(ArrayList summary)
         {
-            Analysis = analysis;
             QuizSummary = summary;
         }
 

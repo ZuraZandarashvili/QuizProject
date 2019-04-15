@@ -31,7 +31,7 @@ namespace Quiz.BL
 
         protected virtual void OnEnd()
         {
-            QuizEndEventArgs e = new QuizEndEventArgs(Summary, GetAnalysis());
+            QuizEndEventArgs e = new QuizEndEventArgs(Summary);
             QuizEnded(this, e);
         }
 
@@ -83,27 +83,7 @@ namespace Quiz.BL
         {
             questionNumber = e.NumberOfQuestions;
         }
-
-        private string GetAnalysis()
-        {
-            string analysis = string.Empty;
-
-            if (correctCount == 0)
-                analysis = "Terrible";
-            else if (correctCount > 0 && correctCount < 6)
-                analysis = "Bad";
-            else if (correctCount > 5 && correctCount < 11)
-                analysis = "Mediocre";
-            else if (correctCount > 10 && correctCount < 15)
-                analysis = "Good";
-            else if (correctCount > 14 && correctCount < 20)
-                analysis = "Nice";
-            else if (correctCount == 20)
-                analysis = "Perfect";
-
-            return analysis;
-        }
-
+     
         public void Evaluate(int questionNumber, string answer)
         {
             OnEvaluate(questionNumber, answer);

@@ -130,6 +130,7 @@
             this.userInputTextBox.Name = "userInputTextBox";
             this.userInputTextBox.Size = new System.Drawing.Size(295, 48);
             this.userInputTextBox.TabIndex = 8;
+            this.userInputTextBox.TextChanged += new System.EventHandler(this.UserInputTextBox_TextChanged);
             // 
             // userInputLabel
             // 

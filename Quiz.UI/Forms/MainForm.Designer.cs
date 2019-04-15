@@ -158,6 +158,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.QuizpictureBox)).EndInit();
             this.quizpanel.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -161,12 +161,6 @@ namespace Quiz.UI.Forms
         {
             ticks++;
             timeLabel.Text = ticks.ToString();
-            if (timeLabel.Text == "300" )
-            {
-                timer1.Stop();
-                statsPanel.BringToFront();
-                MessageBox.Show("Sorry, you are out of time!", "Times up", MessageBoxButtons.OK);
-            }
         }
     }
 }
